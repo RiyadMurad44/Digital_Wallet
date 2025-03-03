@@ -1,42 +1,4 @@
 <?php
-// require_once '../Connection/connection.php';
-
-// class Admins {
-//     public static function create($name, $email, $password, $address) {
-//         global $conn;
-//         $stmt = $conn->prepare("INSERT INTO Admins (name, email, password, address) VALUES (?, ?, ?, ?)");
-//         $stmt->bind_param("ssss", $name, $email, $password, $address);
-//         return $stmt->execute();
-//     }
-
-//     public static function read($id) {
-//         global $conn;
-//         $stmt = $conn->prepare("SELECT * FROM Admins WHERE id = ?");
-//         $stmt->bind_param("i", $id);
-//         $stmt->execute();
-//         return $stmt->get_result()->fetch_assoc();
-//     }
-
-//     public static function update($id, $name, $email, $password, $address) {
-//         global $conn;
-//         $stmt = $conn->prepare("UPDATE Admins SET name = ?, email = ?, password = ?, address = ? WHERE id = ?");
-//         $stmt->bind_param("ssssi", $name, $email, $password, $address, $id);
-//         return $stmt->execute();
-//     }
-
-//     public static function delete($id) {
-//         global $conn;
-//         $stmt = $conn->prepare("DELETE FROM Admins WHERE id = ?");
-//         $stmt->bind_param("i", $id);
-//         return $stmt->execute();
-//     }
-// }
-?>
-
-
-
-
-<?php
 
 // This file is for CRUD applications for all the Admins
 
