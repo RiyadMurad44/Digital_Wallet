@@ -1,5 +1,5 @@
 <?php
-// getUsers.php
+// getWallets.php
 
 include("../../Connection/connection.php");
 
@@ -9,13 +9,13 @@ if(isset($_GET["id"])){
     $id = -1;
 }
 
-$user = new Users($conn);
+$wallet = new Wallets($conn);
 
 if($id == -1){
-    $users = $user->read();
+    $wallets = $wallet->read();
 }else{
-    $users = $user->read($id);
+    $wallets = $wallet->read($id);
 }
 
-echo json_encode($users);
+echo json_encode($wallets);
 ?>
