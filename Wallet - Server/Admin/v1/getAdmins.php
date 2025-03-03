@@ -1,5 +1,5 @@
 <?php
-// getUsers.php
+// getAdmins.php
 
 include("../../Connection/connection.php");
 
@@ -9,13 +9,13 @@ if(isset($_GET["id"])){
     $id = -1;
 }
 
-$user = new Users($conn);
+$admin = new Admins($conn);
 
 if($id == -1){
-    $users = $user->read();
+    $admins = $admin->read();
 }else{
-    $users = $user->read($id);
+    $admins = $admin->read($id);
 }
 
-echo json_encode($users);
+echo json_encode($admins);
 ?>

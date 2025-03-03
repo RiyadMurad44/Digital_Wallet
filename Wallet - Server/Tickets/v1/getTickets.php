@@ -1,5 +1,5 @@
 <?php
-// getUsers.php
+// getTickets.php
 
 include("../../Connection/connection.php");
 
@@ -9,13 +9,13 @@ if(isset($_GET["id"])){
     $id = -1;
 }
 
-$user = new Users($conn);
+$ticket = new Tickets($conn);
 
 if($id == -1){
-    $users = $user->read();
+    $tickets = $ticket->read();
 }else{
-    $users = $user->read($id);
+    $tickets = $ticket->read($id);
 }
 
-echo json_encode($users);
+echo json_encode($tickets);
 ?>
