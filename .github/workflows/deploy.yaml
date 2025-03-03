@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            echo "Connected to EC2!" > /home/ubuntu/Hello.txt
-            # cd /var/www/html/Digital_Wallet  
-            # sudo git pull origin main
-            # sudo systemctl restart apache2
+            echo "Connected to EC2!"
+            cd /var/www/html/Digital_Wallet  
+            sudo git pull https://${{ secrets.GIT_PULL_TOKEN }}@github.com/RiyadMurad44/Digital_Wallet.git
+            sudo systemctl restart apache2
