@@ -3,8 +3,8 @@
 // Database configuration
 $host = "localhost";  
 $username = "root"; 
-$password = ""; 
-$database = "your_database"; 
+$password = "S$f1234;"; 
+$database = "Digital_Wallet"; 
 
 // Create a connection
 $conn = new mysqli($host, $username, $password, $database);
