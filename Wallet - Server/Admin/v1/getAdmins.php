@@ -1,7 +1,7 @@
 <?php
 // getAdmins.php
 
-include("../../Connection/connection.php");
+require("../../Connection/connection.php");
 
 if(isset($_GET["id"])){
     $id = $_GET["id"];

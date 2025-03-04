@@ -1,7 +1,7 @@
 <?php
 // deleteAdmin.php
 
-include("../../Connection/connection.php");
+require("../../Connection/connection.php");
 include("../../utils.php");
 
 if(isset($_GET["id"])){
