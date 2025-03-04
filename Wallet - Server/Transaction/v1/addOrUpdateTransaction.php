@@ -1,7 +1,7 @@
 <?php
 // addOrUpdateTransaction.php
 
-include("../../Connection/connection.php");
+require("../../Connection/connection.php");
 include("../../utils.php");
 
 $is_new = isset($_GET["id"]) && $_GET["id"] == "add";

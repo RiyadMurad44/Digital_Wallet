@@ -1,7 +1,7 @@
 <?php
 // This file is for CRUD applications for all the Users
 
-require_once "../Connection/connection.php";
+require_once ("../Connection/connection.php");
 
 class Users {
     private $conn;
@@ -11,10 +11,10 @@ class Users {
         $this->conn = $conn;
     }
 
-    public function create($name, $address, $nationality, $email, $password, $verification_type, $subscription_tier, $blocked_users) {
+    public function create($name, $address, $nationality, $email, $password) {
         $query = "INSERT INTO $this->table (name, address, nationality, email, password, verification_type, subscription_tier, blocked_users) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query);
-        return $stmt->execute([$name, $address, $nationality, $email, $password, $verification_type, $subscription_tier, $blocked_users]);
+        return $stmt->execute([$name, $address, $nationality, $email, $password, NULL, 1, NULL]);
     }
 
     public function read($id = null) {
