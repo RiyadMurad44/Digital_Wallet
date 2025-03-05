@@ -1,8 +1,9 @@
 <?php
 // addOrUpdateUser.php
+require("../../Connection/connection.php");
 
-// require("../../Connection/connection.php");
-include("../../Models/Users.php");
+
+// include("../../Models/Users.php");
 include("../../utils.php");
 
 $is_new = isset($_GET["id"]) && $_GET["id"] == "add";
