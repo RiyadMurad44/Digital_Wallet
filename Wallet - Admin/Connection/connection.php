@@ -3,7 +3,7 @@
 // Database configuration
 $host = "localhost";  
 $username = "root"; 
-$password = "S$f1234;"; 
+$password = ""; //SEf123456
 $database = "Digital_Wallet"; 
 
 // Create a connection
