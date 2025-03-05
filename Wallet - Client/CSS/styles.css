@@ -271,8 +271,7 @@ section {
 }
 
 .input-group select,
-.input-group input[type="text"],
-.input-group input[type="file"] {
+.input-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -308,7 +307,7 @@ section {
   background-color: #1ccf31;
   color: white;
   font-size: 16px;
-  border: none;
+  border: 2px solid;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 25px;
