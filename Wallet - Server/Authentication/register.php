@@ -1,6 +1,5 @@
 <?php
   require("../Connection/connection.php");
-  // include("../User/v1/addOrUpdateUser.php");
 
   if(!isset($_POST["email"]) || !isset($_POST["password"]) || !isset($_POST["Nationality"]) || !isset($_POST["Address"]) || !isset($_POST["name"])) {
 
@@ -14,10 +13,10 @@
   }
 
   $name = $_POST["name"];
+  $address = $_POST["address"];
+  $nationality = $_POST["Nationality"];
   $email = $_POST["email"];
   $password = $_POST["password"];
-  $nationality = $_POST["Nationality"];
-  $address = $_POST["address"];
 
 
   // Validation for existing username
@@ -25,8 +24,11 @@
   $hashed = password_hash($password, PASSWORD_BCRYPT);
 
   try {
-    $query = $conn->prepare("INSERT INTO users(email, password) values(?, ?)");
-    $query->bind_param("ss", $email, $hashed);
+
+    $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password) values(?, ?, ?, ?, ?)");
+    $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed);
+
+
     $query->execute();
 
     $query = $conn->prepare("SELECT * FROM users WHERE email = ?");
