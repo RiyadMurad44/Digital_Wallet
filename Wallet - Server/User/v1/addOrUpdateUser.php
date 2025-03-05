@@ -1,7 +1,7 @@
 <?php
 // addOrUpdateUser.php
 
-require("../../Connection/connection.php");
+// require("../../Connection/connection.php");
 include("../../Models/Users.php");
 include("../../utils.php");
 
