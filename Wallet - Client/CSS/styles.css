@@ -271,8 +271,7 @@ section {
 }
 
 .input-group select,
-.input-group input[type="text"],
-.input-group input[type="file"] {
+.input-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
