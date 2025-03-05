@@ -26,10 +26,10 @@
   try {
 
     // $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password, is_validated, verification_type, subscription_tier, created_date, blocked_users) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password) values(?, ?, ?, ?, ?)");
-    $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed, FALSE, NULL, 1, DATE(), NULL);
+    $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password) values(?, ?, ?, ?, ?, FALSE, NULL, 1, DATE(), NULL)");
+    $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed);
     // $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed, FALSE, NULL, 1, DATE(), NULL);
-
+    
     // $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password, is_validated, verification_type, subscription_tier, created_date, blocked_users) 
     // VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?)");
 
