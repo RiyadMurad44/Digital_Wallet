@@ -7,7 +7,7 @@ header("Access-Control-Allow-Methods: *");
 // Database configuration
 $host = "localhost";  
 $username = "root"; 
-$password = ""; //S\$f1234;
+$password = ""; //SEf1234;
 $database = "Digital_Wallet"; 
 
 // Create a connection

@@ -1,11 +1,9 @@
 <?php
-
-
   require("../Connection/connection.php");
 
   // $body = json_decode(file_get_contents("php://input"), true);
 
-  if(!isset($_POST["username"]) || !isset($_POST["password"])) {
+  if(!isset($_POST["email"]) || !isset($_POST["password"])) {
 
     http_response_code(400);
 
@@ -17,7 +15,7 @@
   }
 
 
-  $username = $_POST["username"];
+  $username = $_POST["email"];
   $password = $_POST["password"];
 
   try {

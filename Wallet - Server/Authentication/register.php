@@ -1,6 +1,6 @@
 <?php
   require("../Connection/connection.php");
-  include("../User/v1/addOrUpdateUser.php");
+  // include("../User/v1/addOrUpdateUser.php");
 
   if(!isset($_POST["email"]) || !isset($_POST["password"]) || !isset($_POST["Nationality"]) || !isset($_POST["Address"]) || !isset($_POST["name"])) {
 
