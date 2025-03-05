@@ -5,10 +5,10 @@ header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 
 // Database configuration
-$host = "localhost";  
+$host = "localhost";
 $username = "root"; 
-$password = ""; //SEf1234;
-$database = "Digital_Wallet"; 
+$password = "SEf123456"; //SEf123456;
+$database = "digital_wallet"; 
 
 // Create a connection
 $conn = new mysqli($host, $username, $password, $database);

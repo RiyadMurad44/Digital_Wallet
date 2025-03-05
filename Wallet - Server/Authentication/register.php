@@ -1,7 +1,7 @@
 <?php
   require("../Connection/connection.php");
 
-  if(!isset($_POST["email"]) || !isset($_POST["password"]) || !isset($_POST["Nationality"]) || !isset($_POST["Address"]) || !isset($_POST["name"])) {
+  if(!isset($_POST["email"]) || !isset($_POST["password"]) || !isset($_POST["nationality"]) || !isset($_POST["address"]) || !isset($_POST["name"])) {
 
     http_response_code(400);
 
@@ -14,7 +14,7 @@
 
   $name = $_POST["name"];
   $address = $_POST["address"];
-  $nationality = $_POST["Nationality"];
+  $nationality = $_POST["nationality"];
   $email = $_POST["email"];
   $password = $_POST["password"];
 
@@ -25,8 +25,26 @@
 
   try {
 
+    // $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password, is_validated, verification_type, subscription_tier, created_date, blocked_users) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password) values(?, ?, ?, ?, ?)");
-    $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed);
+    $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed, FALSE, NULL, 1, DATE(), NULL);
+    // $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed, FALSE, NULL, 1, DATE(), NULL);
+
+    // $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password, is_validated, verification_type, subscription_tier, created_date, blocked_users) 
+    // VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?)");
+
+    // $query->bind_param("sssssisii", 
+    //     $name, 
+    //     $address, 
+    //     $nationality, 
+    //     $email, 
+    //     $hashed, 
+    //     0,        
+    //     NULL,     
+    //     1,        
+    //     NULL      
+    // );
+
 
 
     $query->execute();

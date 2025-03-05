@@ -21,6 +21,5 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Connected to EC2!"
-            cd /var/www/html/Digital_Wallet  
-            sudo git pull https://${{ secrets.GIT_PULL_TOKEN }}@github.com/RiyadMurad44/Digital_Wallet.git
+            sudo ./gitPull.sh
             sudo systemctl restart apache2
