@@ -26,7 +26,7 @@
 
   try {
     $query = $conn->prepare("INSERT INTO users(email, password) values(?, ?)");
-    $query->bind_param("ss", $username, $hashed);
+    $query->bind_param("ss", $email, $hashed);
     $query->execute();
 
     $query = $conn->prepare("SELECT * FROM users WHERE email = ?");
