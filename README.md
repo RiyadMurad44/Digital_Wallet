@@ -33,5 +33,5 @@ Now after we click on the "signup" button, we will see now that the user was cre
 
 -GitHub Pages:
 
-<a href="https://github.com/RiyadMurad44/RiyadMurad44.github.io">The Repository for the GitHub Pages</a>
+<a href="https://github.com/RiyadMurad44/RiyadMurad44.github.io">The Repository for the GitHub Pages</a><br/>
 <a href="https://riyadmurad44.github.io/">https://riyadmurad44.github.io/</a>
