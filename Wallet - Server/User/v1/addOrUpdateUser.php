@@ -13,8 +13,6 @@ if(isset($_GET["id"]) && !$is_new){
     sendResponse(false, "Invalid GET Parameter");
 }
 
-$id = $is_new ? null : $_GET["id"];
-
 if(isset($_POST["name"]) && isset($_POST["address"]) && isset($_POST["nationality"]) && isset($_POST["email"]) && isset($_POST["password"])) {
     $name = $_POST["name"];
     $address = $_POST["address"];
@@ -33,10 +31,10 @@ if($is_new){
     try{
         $result = $user->create($name, $address, $nationality, $email, $hashed);
         $response = $result ? sendResponse(true, "User created!") : sendResponse(false, "Failed to create User");
-        $result = $user->read($id);
-        echo json_encode([
-        "result" => $result,
-    ]);
+    //     $result = $user->read($id);
+    //     echo json_encode([
+    //     "result" => $result,
+    // ]);
     }catch (\Throwable $e) {
         http_response_code(400);
 
