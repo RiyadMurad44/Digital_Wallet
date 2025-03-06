@@ -25,6 +25,8 @@
 
   try {
 
+    $user = new Users($conn);
+
     // $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password, is_validated, verification_type, subscription_tier, created_date, blocked_users) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $query = $conn->prepare("INSERT INTO users(name, address, nationality, email, password) values(?, ?, ?, ?, ?)");
     $query->bind_param("sssss", $name, $address, $nationality, $email, $hashed);

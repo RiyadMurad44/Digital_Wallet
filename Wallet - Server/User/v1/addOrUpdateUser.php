@@ -2,8 +2,7 @@
 // addOrUpdateUser.php
 require("../../Connection/connection.php");
 
-
-// include("../../Models/Users.php");
+include("../../Models/Users.php");
 include("../../utils.php");
 
 $is_new = isset($_GET["id"]) && $_GET["id"] == "add";
@@ -14,19 +13,16 @@ if(isset($_GET["id"]) && !$is_new){
     sendResponse(false, "Invalid GET Parameter");
 }
 
+$id = $is_new ? null : $_GET["id"];
+
 if(isset($_POST["name"]) && isset($_POST["address"]) && isset($_POST["nationality"]) && isset($_POST["email"]) && isset($_POST["password"])) {
     $name = $_POST["name"];
     $address = $_POST["address"];
     $nationality = $_POST["nationality"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    // $verification_type = $_POST["verification_type"];
-    // $subscription_tier = $_POST["subscription_tier"];
-    // $blocked_users = $_POST["blocked_users"];
 
     $hashed = password_hash($password, PASSWORD_BCRYPT);
-
-
 
 } else {
     sendResponse(false, "Missing parameters");

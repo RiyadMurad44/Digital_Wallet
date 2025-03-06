@@ -2,6 +2,7 @@
 // getUsers.php
 
 require("../../Connection/connection.php");
+// include("../../Models/Users.php");
 
 if(isset($_GET["id"])){
     $id = $_GET["id"];
