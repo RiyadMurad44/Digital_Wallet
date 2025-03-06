@@ -19,11 +19,11 @@ If the method is "GET", then the API will take 1 input and then return the value
 
 As we can see here using the "signup" form, we will fill out some data as shown in the picture below:
 
-<center><img src="./Assets/register.png"></img></center>
+<img src="./Assets/register.png"></img>
 
 Now after we click on the "signup" button, we will see now that the user was created as shown in the below picture:
 
-<center><img src="./Assets/success.png"></img></center>
+<img src="./Assets/success.png"></img>
 
 
 
