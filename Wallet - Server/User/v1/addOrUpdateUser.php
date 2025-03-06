@@ -31,10 +31,10 @@ if($is_new){
     try{
         $result = $user->create($name, $address, $nationality, $email, $hashed);
         $response = $result ? sendResponse(true, "User created!") : sendResponse(false, "Failed to create User");
-        $result = $user->read($id);
-        echo json_encode([
-        "result" => $result,
-    ]);
+    //     $result = $user->read($id);
+    //     echo json_encode([
+    //     "result" => $result,
+    // ]);
     }catch (\Throwable $e) {
         http_response_code(400);
 
